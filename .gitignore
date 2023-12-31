@@ -1,0 +1,32 @@
+# Arquivos binários
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Arquivos de log e saída de compilação
+*.log
+*.out
+
+# Diretórios gerados pelo Go
+/bin/
+/pkg/
+/vendor/
+
+# Arquivos de configuração específicos do editor
+.vscode/
+.idea/
+
+# Arquivos temporários e de backup
+*.swp
+*~
+
+# Arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de dependências
+go.sum
+
+# Arquivos de ambiente
+.env
