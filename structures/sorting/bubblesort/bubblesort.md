@@ -23,3 +23,31 @@ Geralmente utilizado para fins educacionais, devido à sua simplicidade. No enta
 ## Notação Assintótica
 
 A notação assintótica deste algoritmo é O(n^2), indicando que seu desempenho piora quadráticamente com o aumento do tamanho da entrada. Isso ocorre porque, em cada passagem pela lista, são feitas comparações e trocas que dependem do tamanho da lista.
+
+
+Para testar o algoritimo, inclua o seguinte código no arquivo main.go 
+
+```
+import (
+	"data-structures/structures/sorting/bubblesort"
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	arr := rand.Perm(10)
+
+	fmt.Println("Array antes da ordenação:", arr)
+
+	executions, duration := bubblesort.BubbleSort(arr)
+
+	// Imprimir o array após a ordenação
+	fmt.Println("Array após a ordenação:", arr)
+
+	fmt.Printf("Tempo de execução: %v\n", duration)
+	fmt.Printf("Número total de execuções: %d\n", executions)
+}
+```
+
