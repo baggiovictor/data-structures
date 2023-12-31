@@ -1,7 +1,7 @@
 package main
 
 import (
-	"data-structures/structures/sorting/bubblesort"
+	"data-structures/structures/sorting/insertionsort"
 	"fmt"
 	"math/rand"
 	"time"
@@ -9,11 +9,11 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	arr := rand.Perm(10)
+	arr := rand.Perm(10000)
 
 	fmt.Println("Array antes da ordenação:", arr)
 
-	executions, duration := bubblesort.BubbleSort(arr)
+	executions, duration := insertionsort.InsertionSort(arr)
 
 	// Imprimir o array após a ordenação
 	fmt.Println("Array após a ordenação:", arr)
